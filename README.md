@@ -1,6 +1,6 @@
 # Async Testing
 
-This repo contains example tests to demonstrate proper async testing
+This repo contains example tests to demonstrate how to test handling async UI updates in React components
 
 # TLDR
 
@@ -20,8 +20,8 @@ This repo contains example tests to demonstrate proper async testing
 - `npm test`
 - Start with `promise.test`, which demonstrates testing promises in isolation
 - The tests are designed to be self-documenting and read through top to bottom building on concepts demonstrated in earlier tests
-- Move on to `async-react.test` which demonstrates testing promises triggered inside a react component
-- Move on to `act.test` to learn more about why it's unnecessary
+- Move on to `async-react.test` which demonstrates setting up assertions for UI updates in React components that happen async
+- Move on to `act.test` to learn more about why it's rarely necessary
 
 # Setting breakpoints in the tests
 
