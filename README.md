@@ -36,7 +36,7 @@ https://javascript.info/async-await
 
 # Mastering the Event Loop, Microtasks, Macrotasks, etc.
 
-If these terms are fuzzy to you, the good news is you don't really have to understand them if you use react testing library's async utils such as `waitFor`. They allow you to think about your test from a user's perspective (ie this data takes a little bit to appear after I click this button). If you're curious and would like to deepen your understanding, I found these resources to be extremely helpful in the past:
+If these terms are fuzzy to you, the good news is you don't really have to understand them if you use react testing library's async utils such as `waitFor`. They allow you to think about your test from a user's perspective (ie this data takes a little bit to appear after I click this button). If you're curious and would like to deepen your understanding, I have found these resources to be extremely helpful:
 
 - [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1s&ab_channel=JSConf)
   - [demo app from talk](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
