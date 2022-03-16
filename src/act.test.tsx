@@ -72,7 +72,7 @@ test("this test passes because the click is wrapped in act, which ensures effect
   const button = container.querySelector("button");
   const label = container.querySelector("p");
 
-  // act will block the next line of code (ie the assertions) from running until the useEffect runs that updates document.title
+  // act will block the next line of code (ie the assertions) from running until the useEffect runs and updates document.title
   act(() => {
     button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
   });

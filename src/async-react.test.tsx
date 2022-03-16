@@ -31,6 +31,7 @@ test("This will pass because it returns a promise, but it's brittle...", () => {
 // What if the implementation details change and now additional promises have to resolve
 // before the todos state gets set? The above approach depends on there only being one promise
 // Our tests should be dumb and not require too much knowledge of a component's internals
+// loosely-cooupled from implementation details of component
 async function fetchTodosWithExtraPromise() {
   const todos = await fetchTodos();
   // pretend we have additional async promises we need to resolve before we can return data:
