@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Async Testing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo contains example tests to demonstrate proper async testing
 
-## Available Scripts
+# TLDR
 
-In the project directory, you can run:
+- Use react testing library, which [automatically wraps all renders and events in act](https://testing-library.com/docs/preact-testing-library/api/#act)
+- You rarely if ever need to use `act`. More Info:
+  - https://twitter.com/kentcdodds/status/1330937800321974272?lang=en
+  - https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning
+  - https://javascript.plainenglish.io/you-probably-dont-need-act-in-your-react-tests-2a0bcd2ad65c
+  - https://davidwcai.medium.com/react-testing-library-and-the-not-wrapped-in-act-errors-491a5629193b
+- Use [react testing library async utils](https://testing-library.com/docs/dom-testing-library/api-async/) instead (`waitFor`, `findByText`, etc.)
 
-### `npm start`
+# Running the tests
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Add a `.only` to the test you want to run (`test.only`) so the console isn't cluttered by other tests
+- `npm test`
+- Start with `promise.test`, which demonstrates testing promises in isolation
+- The tests are designed to be self-documenting and read through top to bottom building on concepts demonstrated in earlier tests
+- Move on to `async-react.test` which demonstrates testing promises triggered inside a react component
+- Move on to `act.test` to learn more about why it's unnecessary
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Setting breakpoints in the tests
 
-### `npm test`
+- Open in VS Code and click the "run and debug" icon on the sidebar
+- Open test file you want to run and click green play icon for "Jest Current File" OR run "Jest CRA Tests"
+  ![Debugging tests](debug-tests.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Mastering the Event Loop, Microtasks, Macrotasks, etc.
 
-### `npm run build`
+If these terms are fuzzy to you, the good news is you don't really have to understand them if you use react testing library's async utils such as `waitFor`. They allow you to think about your test from a user's perspective (ie this data takes a little bit to appear after I click this button). If you're curious and would like to deepen your understanding, I found these resources to be extremely helpful in the past:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1s&ab_channel=JSConf)
+  - [demo app from talk](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+- https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+- https://javascript.info/event-loop
+- https://javascript.info/microtask-queue
