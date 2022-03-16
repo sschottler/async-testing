@@ -14,6 +14,7 @@ This repo contains example tests to demonstrate proper async testing
 
 # Running the tests
 
+- `npm install` once to setup `node_modules`
 - Add a `.only` to the test you want to run (`test.only`) so the console isn't cluttered by other tests
 - `npm test`
 - Start with `promise.test`, which demonstrates testing promises in isolation
