@@ -14,6 +14,7 @@ This repo contains example tests to demonstrate proper async testing
 
 # Running the tests
 
+- `git clone` this repo
 - `npm install` once to setup `node_modules`
 - Add a `.only` to the test you want to run (`test.only`) so the console isn't cluttered by other tests
 - `npm test`
@@ -27,6 +28,11 @@ This repo contains example tests to demonstrate proper async testing
 - Open in VS Code and click the "run and debug" icon on the sidebar
 - Open test file you want to run and click green play icon for "Jest Current File" OR run "Jest CRA Tests"
   ![Debugging tests](debug-tests.png)
+
+# Async/Await Syntax
+
+This is a good tutorial to get more comfortable with async/await syntax for working with promises:
+https://javascript.info/async-await
 
 # Mastering the Event Loop, Microtasks, Macrotasks, etc.
 
