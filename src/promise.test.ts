@@ -25,14 +25,10 @@ test("this test passes because it returns a promise which the test runner will w
 
   expect(value).toBe(1);
 
-  return Promise.resolve(2)
-    .then((result) => {
-      value = result;
-    })
-    .then(() => {
-      // chain on to the promise we are waiting for and only assert once it resolves:
-      expect(value).toBe(2);
-    });
+  return Promise.resolve(2).then((result) => {
+    value = result;
+    expect(value).toBe(2);
+  });
 });
 
 test("This test also returns a promise due to async keyword, but with simpler more readable syntax", async () => {
