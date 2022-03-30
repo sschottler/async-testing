@@ -165,7 +165,7 @@ test("just use react testing library, which automatically wraps everything with 
   expect(document.title).toBe("You clicked 1 times");
 });
 
-test("this will still give the annoying act warning even though we are using react-testing-library", () => {
+test("this will pass, but we still get the annoying act warning even though we are using react-testing-library", () => {
   render(<Names />);
 
   const button = screen.getByText("Load names");
