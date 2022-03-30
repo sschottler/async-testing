@@ -232,8 +232,6 @@ test("RTL async utils test from user perspective and don't care about technical 
   // don't need bullshit like this:
   // await new Promise((resolve) => setTimeout(resolve));
   // often it won't even be obvious where the async code is
-  // it could be inside a thunk that is dispatched by another thunk and results in
-  // redux store updating and new props flowing into component and rerender...
   // it could be in a 3rd party component's source that schedules the state update in a setTimeout
   // (maybe an autocomplete or data visualization with sophisticated batching & scheduling logic to keep screen responsive)
   // this is why you wanna be able to test from a user perspective without knowledge of implementation details
