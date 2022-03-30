@@ -211,6 +211,9 @@ test("fix the act warning by using react-testing-library async utils", async () 
   render(<Names />);
 
   const button = screen.getByText("Load names");
+  // click helper uses sync act, not async act internally
+  // so you need the subsequent waitFor to await promise resolution this click triggers
+  // or you will get act warning
   userEvent.click(button);
 
   // wait for the UI update triggered by async state setter
