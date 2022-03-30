@@ -12,6 +12,13 @@ This repo contains example tests to demonstrate how to test handling async UI up
   - https://davidwcai.medium.com/react-testing-library-and-the-not-wrapped-in-act-errors-491a5629193b
 - Use [react testing library async utils](https://testing-library.com/docs/dom-testing-library/api-async/) instead (`waitFor`, `findByText`, etc.)
 
+# Video recordings of the presentations
+
+Watch the videos below and follow along in the code:
+
+- [Part 1](https://drive.google.com/file/d/1OQLEfXyxQFoRXeUvKl66pvj6R_Dk33wN/view)
+- [Part 2](https://drive.google.com/file/d/1K9q0GGOt2N5vK5P0Gyc1OaOqO0XtBpOP/view)
+
 # Running the tests
 
 - `git clone` this repo
