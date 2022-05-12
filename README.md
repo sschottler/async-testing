@@ -16,8 +16,8 @@ This repo contains example tests to demonstrate how to test handling async UI up
 
 Watch the videos below and follow along in the code:
 
-- [Part 1](https://drive.google.com/file/d/1OQLEfXyxQFoRXeUvKl66pvj6R_Dk33wN/view)
-- [Part 2](https://drive.google.com/file/d/1K9q0GGOt2N5vK5P0Gyc1OaOqO0XtBpOP/view)
+- [Part 1](https://drive.google.com/file/d/1kueZbCXpOQ5N5XrVNYEo2PWx7dKEkz_B/view?usp=sharing)
+- [Part 2](https://drive.google.com/file/d/1shzSsSY-3QNT8-5ELY9YpXgLjDEwicyK/view?usp=sharing)
 
 # Running the tests
 
